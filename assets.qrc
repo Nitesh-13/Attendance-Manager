@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/new/assets">
+        <file>assets/downArrow.png</file>
+        <file>assets/students.png</file>
+        <file>assets/info.png</file>
+        <file>assets/total.png</file>
+        <file>assets/degreehat.png</file>
+        <file>assets/arrow-19-48.ico</file>
+        <file>assets/arrow-119-48.ico</file>
+        <file>assets/arrow-151-48.ico</file>
+        <file>assets/arrow-204-32.ico</file>
+        <file>assets/arrow-213-48.ico</file>
+        <file>assets/checkbox_checked.ico</file>
+        <file>assets/checkbox_checked_hover_pressed.ico</file>
+        <file>assets/checkbox_indeterminate.ico</file>
+        <file>assets/checkbox_indeterminate_hover_pressed.ico</file>
+        <file>assets/checkbox_unchecked.ico</file>
+        <file>assets/checkbox_unchecked_hover_pressed.ico</file>
+        <file>assets/icon.ico</file>
+        <file>assets/Mountain.ttf</file>
+        <file>assets/homelogo.png</file>
+        <file>assets/update.png</file>
+        <file>assets/view.png</file>
+        <file>assets/logout.png</file>
+        <file>assets/excel.png</file>
+    </qresource>
+</RCC>

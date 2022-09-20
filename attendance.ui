@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>attendance</class>
+ <widget class="QDialog" name="attendance">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>721</width>
+    <height>576</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Attendance Manager</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="assets.qrc">
+    <normaloff>:/new/assets/assets/icon.ico</normaloff>:/new/assets/assets/icon.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>10</y>
+     <width>701</width>
+     <height>551</height>
+    </rect>
+   </property>
+   <widget class="QLabel" name="logo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>131</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="assets.qrc">:/new/assets/assets/degreehat.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="displayLabel">
+    <property name="geometry">
+     <rect>
+      <x>133</x>
+      <y>35</y>
+      <width>551</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:white;
+border-radius:10px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="navbar">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>12</y>
+      <width>151</width>
+      <height>517</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>27</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad, x1:1, y2:0, x2:1, y2:1, stop:0 rgba(85, 98, 112, 255), stop:1 rgba(255, 107, 107, 255)) ;
+border-radius:10px;
+/*rgb(17, 24, 37)*/</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="quit">
+    <property name="geometry">
+     <rect>
+      <x>635</x>
+      <y>50</y>
+      <width>30</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:rgba(85,98,112,255);
+	color:rgba(255,255,255,200);
+	border-radius:5px;
+}
+QPushButton:pressed
+{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	background-color:rgba(255,107,107,255);
+}</string>
+    </property>
+    <property name="text">
+     <string>X</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnHome">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>190</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:transparent;
+	text-align:left;
+	color:rgb(156, 156, 170);
+	padding-left:10px;
+	border:none;
+}
+QPushButton:pressed
+{
+	padding-left:15px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	color:rgba(255,255,255,200);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	color:rgba(255,255,255,200);
+}
+QPushButton:checked
+{
+	background-color:rgba(255,107,107,255);
+	color:rgba(255,255,255,200);
+}</string>
+    </property>
+    <property name="text">
+     <string> Home</string>
+    </property>
+    <property name="icon">
+     <iconset resource="assets.qrc">
+      <normaloff>:/new/assets/assets/homelogo.png</normaloff>:/new/assets/assets/homelogo.png</iconset>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnUpdate">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>230</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:transparent;
+	text-align:left;
+	color:rgb(156, 156, 170);
+	padding-left:10px;
+	border:none;
+}
+QPushButton:pressed
+{
+	padding-left:15px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	color:rgba(255,255,255,200);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	color:rgba(255,255,255,200);
+}
+QPushButton:checked
+{
+	background-color:rgba(255,107,107,255);
+	color:rgba(255,255,255,200);
+}</string>
+    </property>
+    <property name="text">
+     <string> Update</string>
+    </property>
+    <property name="icon">
+     <iconset resource="assets.qrc">
+      <normaloff>:/new/assets/assets/update.png</normaloff>:/new/assets/assets/update.png</iconset>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnView">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>270</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:transparent;
+	text-align:left;
+	color:rgb(156, 156, 170);
+	padding-left:10px;
+	border:none;
+}
+QPushButton:pressed
+{
+	padding-left:15px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	color:rgba(255,255,255,200);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	color:rgba(255,255,255,200);
+}
+QPushButton:checked
+{
+	background-color:rgba(255,107,107,255);
+	color:rgba(255,255,255,200);
+}</string>
+    </property>
+    <property name="text">
+     <string> Download</string>
+    </property>
+    <property name="icon">
+     <iconset resource="assets.qrc">
+      <normaloff>:/new/assets/assets/excel.png</normaloff>:/new/assets/assets/excel.png</iconset>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="homebtnSide">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>190</y>
+      <width>5</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#fff;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="homebtnSide2">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>230</y>
+      <width>5</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#fff;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="homebtnSide3">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>270</y>
+      <width>5</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#fff;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="tabs">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>90</y>
+      <width>491</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QStackedWidget{
+	background-color:#fff;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="home">
+     <widget class="QLabel" name="lblTotal">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>50</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string>Total</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="subjectlbl">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>230</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:black;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="percent">
+      <property name="geometry">
+       <rect>
+        <x>345</x>
+        <y>25</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblDate">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>130</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color : black;</string>
+      </property>
+      <property name="text">
+       <string>Date : </string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="date">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>130</y>
+        <width>141</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateEdit{
+	color:black;
+	background-color:white;
+	border: 1px solid #ced4da;
+	border-radius:4px;
+	padding-left: 10px;
+}
+
+QCalendarWidget QWidget {
+	background-color:#fff;
+	 alternate-background-color: #B8E2FF;
+}
+
+QCalendarWidget QWidget#qt_calendar_navigationbar {
+    background-color: #fff;
+	border: 2px solid  #B8E2FF;
+	border-bottom: 0px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+QCalendarWidget QWidget#qt_calendar_prevmonth, 
+QWidget#qt_calendar_nextmonth {
+    border: none;
+	qproperty-icon: none; 
+	
+    min-width: 13px;
+    max-width: 13px;
+    min-height: 13px;
+    max-height: 13px;
+
+    border-radius: 5px; 
+    background-color: transparent; 
+	padding: 5px;
+}
+
+
+QCalendarWidget QWidget#qt_calendar_prevmonth {
+	margin-left:5px;
+	image: url(:/new/assets/assets/arrow-119-48.ico);
+}
+QCalendarWidget QWidget#qt_calendar_nextmonth {
+	margin-right:5px;
+	image: url(:/new/assets/assets/arrow-19-48.ico);
+}
+QCalendarWidget QWidget#qt_calendar_prevmonth:hover, 
+QWidget#qt_calendar_nextmonth:hover {
+    background-color: #55aaff;
+}
+
+QCalendarWidget QWidget#qt_calendar_prevmonth:pressed, 
+QWidget#qt_calendar_nextmonth:pressed {
+    background-color: rgba(235, 235, 235, 100);
+}
+
+QCalendarWidget QWidget#qt_calendar_yearbutton {
+    color: #000;
+	margin:5px;
+    border-radius: 5px;
+	font-size: 13px;
+	padding:0px 10px;
+}
+
+ QCalendarWidget QWidget#qt_calendar_monthbutton {
+	width: 110px;
+    color: #000;
+	font-size: 13px;
+	margin:5px 0px;
+    border-radius: 5px;
+	padding:0px 2px;
+}
+
+QCalendarWidget QWidget#qt_calendar_yearbutton:hover, 
+QWidget#qt_calendar_monthbutton:hover {
+    background-color: #55aaff;
+}
+
+QCalendarWidget QWidget#qt_calendar_yearbutton:pressed, 
+QWidget#qt_calendar_monthbutton:pressed {
+    background-color: rgba(235, 235, 235, 100);
+}
+
+QCalendarWidget QWidget#qt_calendar_yearedit {
+    min-width: 53px;
+    color: #000;
+    background: transparent;
+	font-size: 13px;
+}
+
+QCalendarWidget QWidget#qt_calendar_yearedit::up-button { 
+	image: url(:/new/assets/assets/arrow-151-48.ico);
+    subcontrol-position: right;
+}
+
+QCalendarWidget QWidget#qt_calendar_yearedit::down-button { 
+	image: url(:/new/assets/assets/arrow-213-48.ico);
+    subcontrol-position: left; 
+}
+
+QCalendarWidget QWidget#qt_calendar_yearedit::down-button, 
+QWidget#qt_calendar_yearedit::up-button {
+	width:10px;
+	padding: 0px 5px;
+	border-radius:3px;
+}
+
+QCalendarWidget QWidget#qt_calendar_yearedit::down-button:hover, 
+QWidget#qt_calendar_yearedit::up-button:hover {
+	background-color: #55aaff;
+}
+
+QCalendarWidget QToolButton QMenu {
+     background-color: white;
+
+}
+QCalendarWidget QToolButton QMenu::item {
+	/*padding: 10px;*/
+}
+QCalendarWidget QToolButton QMenu::item:selected:enabled {
+    background-color: #55aaff;
+}
+
+QCalendarWidget QToolButton::menu-indicator {
+	subcontrol-origin: margin;
+	subcontrol-position: right center;
+	margin-top: 10px;
+	width:20px;
+}
+QCalendarWidget QWidget#qt_calendar_calendarview {
+    outline: 0px;
+	border: 2px solid  #B8E2FF;
+	border-top: 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+QCalendarWidget QWidget#qt_calendar_calendarview::item:hover {
+   border-radius:5px;
+	background-color:#aaffff;
+}
+
+QCalendarWidget QWidget#qt_calendar_calendarview::item:selected {
+    background-color: #55aa7f; 
+	border-radius:5px;
+}</string>
+      </property>
+      <property name="minimumDateTime">
+       <datetime>
+        <hour>14</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>2020</year>
+        <month>9</month>
+        <day>19</day>
+       </datetime>
+      </property>
+      <property name="minimumDate">
+       <date>
+        <year>2020</year>
+        <month>9</month>
+        <day>19</day>
+       </date>
+      </property>
+      <property name="calendarPopup">
+       <bool>true</bool>
+      </property>
+      <property name="date">
+       <date>
+        <year>2022</year>
+        <month>12</month>
+        <day>20</day>
+       </date>
+      </property>
+     </widget>
+     <widget class="QLabel" name="totalNo">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>25</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="students">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="assets.qrc">:/new/assets/assets/students.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblSubject">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>220</y>
+        <width>91</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color : black;</string>
+      </property>
+      <property name="text">
+       <string>Subject : </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="total">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>20</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="assets.qrc">:/new/assets/assets/total.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="presentNo">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>25</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblPresent">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>91</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string>Present</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblPercent">
+      <property name="geometry">
+       <rect>
+        <x>345</x>
+        <y>50</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string>Percent</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblYear">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>181</y>
+        <width>51</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color : black;</string>
+      </property>
+      <property name="text">
+       <string>Year : </string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnAttendance">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>320</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	background-color:rgba(85,98,112,255);
+	color:rgba(255,255,255,200);
+	border-radius:5px;
+}
+QPushButton:pressed
+{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	background-color:rgba(255,107,107,255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Select Subject</string>
+      </property>
+      <property name="icon">
+       <iconset resource="assets.qrc">
+        <normaloff>:/new/assets/assets/degreehat.png</normaloff>:/new/assets/assets/degreehat.png</iconset>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="info">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>20</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="assets.qrc">:/new/assets/assets/info.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="year">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>285</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox{
+	color:black;
+	background-color:white;
+	border: 1px solid #ced4da;
+	border-radius:4px;
+	padding-left: 10px;
+}
+QComboBox::drop-down{
+	border:0px;
+}
+QComboBox::down-arrow{
+	image: url(:/new/assets/assets/downArrow.png);
+	width:12px;
+	height:12px;
+	margin-right: 10px;
+}
+QComboBox:on{
+	border:2px solid red;
+}
+QComboBox QListView{
+	font-size:12px;
+	border:1px solid rgba(0,0,0,10%);
+	padding:5px;
+	background-color: #fff;
+	outline: 0px;
+}
+QComboBox QListView::item{
+	padding-left: 10px;
+	background-color: #fff;
+}
+QComboBox QListView::item:hover{
+	background-color: #D2122E;
+}
+QComboBox QListView::item:selected{
+	background-color: #D2122E;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Select</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SE Attendance</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TE Attendance</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="btnExtraLecture">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>340</y>
+        <width>111</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	background-color:rgba(85,98,112,255);
+	color:rgba(255,255,255,200);
+	border-radius:5px;
+}
+QPushButton:pressed
+{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	background-color:rgba(255,107,107,255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Extra</string>
+      </property>
+      <property name="icon">
+       <iconset resource="assets.qrc">
+        <normaloff>:/new/assets/assets/view.png</normaloff>:/new/assets/assets/view.png</iconset>
+      </property>
+     </widget>
+     <zorder>lblDate</zorder>
+     <zorder>date</zorder>
+     <zorder>students</zorder>
+     <zorder>lblSubject</zorder>
+     <zorder>total</zorder>
+     <zorder>presentNo</zorder>
+     <zorder>lblPresent</zorder>
+     <zorder>lblPercent</zorder>
+     <zorder>lblYear</zorder>
+     <zorder>btnAttendance</zorder>
+     <zorder>info</zorder>
+     <zorder>subjectlbl</zorder>
+     <zorder>lblTotal</zorder>
+     <zorder>percent</zorder>
+     <zorder>totalNo</zorder>
+     <zorder>year</zorder>
+     <zorder>btnExtraLecture</zorder>
+    </widget>
+    <widget class="QWidget" name="update">
+     <widget class="QLabel" name="lblrollUp">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>85</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>12</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Roll No :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblpresentst">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>241</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>12</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Select Present :
+Status </string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="presentCheck">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>230</y>
+        <width>112</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>13</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Present</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="absentCheck">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>270</y>
+        <width>112</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>13</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Absent</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblname">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>12</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Name :</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="rollInp">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>90</y>
+        <width>181</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border: 2px solid rgba(0,0,0,0);
+border-bottom-color:rgba(46,82,101,200);
+color:rgb(0,0,0);
+padding-bottom:7px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Roll No</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="updateRoll">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>320</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	background-color:rgba(85,98,112,255);
+	color:rgba(255,255,255,200);
+	border-radius:5px;
+}
+QPushButton:pressed
+{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	background-color:rgba(255,107,107,255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Update</string>
+      </property>
+      <property name="icon">
+       <iconset resource="assets.qrc">
+        <normaloff>:/new/assets/assets/degreehat.png</normaloff>:/new/assets/assets/degreehat.png</iconset>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>0</y>
+        <width>341</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Update Present Status</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblyear">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>125</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>12</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Year :</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="updateYear">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>135</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox{
+	color:black;
+	background-color:white;
+	border: 1px solid #ced4da;
+	border-radius:4px;
+	padding-left: 10px;
+}
+QComboBox::drop-down{
+	border:0px;
+}
+QComboBox::down-arrow{
+	image: url(:/new/assets/assets/downArrow.png);
+	width:12px;
+	height:12px;
+	margin-right: 10px;
+}
+QComboBox:on{
+	border:2px solid red;
+}
+QComboBox QListView{
+	font-size:12px;
+	border:1px solid rgba(0,0,0,10%);
+	padding:5px;
+	background-color: #fff;
+	outline: 0px;
+}
+QComboBox QListView::item{
+	padding-left: 10px;
+	background-color: #fff;
+}
+QComboBox QListView::item:hover{
+	background-color: #D2122E;
+}
+QComboBox QListView::item:selected{
+	background-color: #D2122E;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Select</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SE Attendance</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TE Attendance</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="nameDisp">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>170</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="view">
+     <widget class="QPushButton" name="btnDownloadExcel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>300</y>
+        <width>161</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	background-color:rgba(85,98,112,255);
+	color:rgba(255,255,255,200);
+	border-radius:5px;
+}
+QPushButton:pressed
+{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	background-color:rgba(255,107,107,255);
+}</string>
+      </property>
+      <property name="text">
+       <string>Download (.xlsx)</string>
+      </property>
+      <property name="icon">
+       <iconset resource="assets.qrc">
+        <normaloff>:/new/assets/assets/excel.png</normaloff>:/new/assets/assets/excel.png</iconset>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblDownloadYr">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>17</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Year : </string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="downloadYear">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>50</y>
+        <width>201</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox{
+	color:black;
+	background-color:white;
+	border: 1px solid #ced4da;
+	border-radius:4px;
+	padding-left: 10px;
+}
+QComboBox::drop-down{
+	border:0px;
+}
+QComboBox::down-arrow{
+	image: url(:/new/assets/assets/downArrow.png);
+	width:12px;
+	height:12px;
+	margin-right: 10px;
+}
+QComboBox:on{
+	border:2px solid red;
+}
+QComboBox QListView{
+	font-size:12px;
+	border:1px solid rgba(0,0,0,10%);
+	padding:5px;
+	background-color: #fff;
+	outline: 0px;
+}
+QComboBox QListView::item{
+	padding-left: 10px;
+	background-color: #fff;
+}
+QComboBox QListView::item:hover{
+	background-color: #D2122E;
+}
+QComboBox QListView::item:selected{
+	background-color: #D2122E;
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Select</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SE Comp</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TE Comp</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="lblDownloadSub">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>16</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Subject :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lblDownloadMo">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>140</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>16</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Month :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="showsubject">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>90</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>16</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="showmonth">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>140</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>16</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnLogout">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>310</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+	background-color:transparent;
+	text-align:left;
+	color:rgb(156, 156, 170);
+	padding-left:10px;
+	border:none;
+}
+QPushButton:pressed
+{
+	padding-left:15px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	color:rgba(255,255,255,200);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	color:rgba(255,255,255,200);
+}
+QPushButton:checked
+{
+	background-color:rgba(255,107,107,255);
+	color:rgba(255,255,255,200);
+}</string>
+    </property>
+    <property name="text">
+     <string> Log Out</string>
+    </property>
+    <property name="icon">
+     <iconset resource="assets.qrc">
+      <normaloff>:/new/assets/assets/logout.png</normaloff>:/new/assets/assets/logout.png</iconset>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>469</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #fff;</string>
+    </property>
+    <property name="text">
+     <string>App v1.0</string>
+    </property>
+   </widget>
+   <zorder>displayLabel</zorder>
+   <zorder>navbar</zorder>
+   <zorder>quit</zorder>
+   <zorder>logo</zorder>
+   <zorder>btnHome</zorder>
+   <zorder>btnUpdate</zorder>
+   <zorder>btnView</zorder>
+   <zorder>homebtnSide</zorder>
+   <zorder>homebtnSide2</zorder>
+   <zorder>homebtnSide3</zorder>
+   <zorder>tabs</zorder>
+   <zorder>btnLogout</zorder>
+   <zorder>label</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
+ <connections/>
+</ui>

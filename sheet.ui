@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>sheet</class>
+ <widget class="QDialog" name="sheet">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>662</width>
+    <height>547</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Attendance Sheet</string>
+  </property>
+  <widget class="QLabel" name="background">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>621</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 10px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exit">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>30</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	background-color:rgba(85,98,112,255);
+	color:rgba(255,255,255,200);
+	border-radius:5px;
+}
+QPushButton:pressed
+{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(255,107,107,255);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	background-color:rgba(255,107,107,255);
+}</string>
+   </property>
+   <property name="text">
+    <string>X</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>90</y>
+     <width>581</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTabWidget {  
+    background-color:#0f2033;
+    /*border-top: 2px solid #C2C7CB;*/
+} 
+QTabWidget::pane { /* The tab widget frame */ 
+	/*border : 2px solid #0f2033;*/
+	border: none;
+	/*border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	border-top-right-radius:10px;*/
+} 
+QTabBar::tab {  
+    /*background-color:#0f2033;*/
+	background-color:transparent; /**/
+    /*border: 1px solid #4973b4;*/
+	border-bottom: 5px solid black;
+    min-width: 100px; 
+    min-height:22px;
+    padding: 0px  2px; 
+    /*color: rgb(255, 255, 255);*/
+	color: red; /**/
+    margin-left: 1px;
+	/*border-top-left-radius:5px;*/
+	/*border-top-right-radius:5px;*/
+}  
+  
+QTabBar::tab:selected { 
+	border-bottom: 5px solid red;
+	color: black;
+    margin-top: 0px;
+}
+QTabBar::tab:hover{
+
+}
+
+QTabBar::tab:!selected {  
+    margin-top: 0px; /* make non-selected tabs look smaller */  
+}
+
+QCheckBox {
+	spacing: 15px;
+	color: #4169e1;
+}
+QCheckBox::indicator {
+	width: 18px;
+	height: 18px;
+}
+
+
+QCheckBox:hover {
+	color: #B31031;
+}
+
+/* Set image for QCheckBox indicator when it is unchecked  */
+QCheckBox::indicator:unchecked {
+	image: url(:/new/assets/assets/checkbox_unchecked.ico);
+}
+
+/* Set image for QCheckBox unchecked indicator when it is hovered and pressed  */
+QCheckBox::indicator:unchecked:hover, QCheckBox::indicator:unchecked:pressed {
+	image: url(:/new/assets/assets/checkbox_unchecked_hover_pressed.ico);
+}
+
+/* Set image for QCheckBox indicator when it is checked  */
+QCheckBox::indicator:checked {
+	image: url(:/new/assets/assets/checkbox_checked.ico);
+}
+
+/* Set image for QCheckBox checked indicator when it is hovered and pressed  */
+QCheckBox::indicator:checked:hover, QCheckBox::indicator:checked:pressed {
+	image: url(:/new/assets/assets/checkbox_checked_hover_pressed.ico);
+}
+
+QTableView{
+	font: 9pt &quot;Arial&quot;;
+    background-color:#D3D3D3; /*Background Color of the table*/
+    border:1px solid #E0DDDC;
+    gridline-color:lightgray; /*Color of the table lines*/
+    color: rgb(0, 0, 0);/*Text Color*/
+    alternate-background-color: white; /*Alternate Row Color*/
+}
+QTableView::item:selected{/*selected item properties*/
+	background-color:#ddd;
+	color:rgb(0, 0, 0);
+}
+QHeaderView{/*Whole header properties*/
+	selection-background-color: #04AA6D;
+}
+QHeaderView::section { /*header section properties*/
+    background-color: #0f2033;
+	border: 1px solid white;
+	font: 700 9pt &quot;Arial&quot;;
+    color: white;
+}</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="tabsClosable">
+    <bool>false</bool>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="tabBarAutoHide">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="table1">
+    <attribute name="title">
+     <string>1-20</string>
+    </attribute>
+    <widget class="QTableView" name="table01">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>13</y>
+       <width>256</width>
+       <height>329</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+    <widget class="QTableView" name="table02">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>13</y>
+       <width>256</width>
+       <height>329</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>21-40</string>
+    </attribute>
+    <widget class="QTableView" name="table03">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>13</y>
+       <width>256</width>
+       <height>329</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+    <widget class="QTableView" name="table04">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>13</y>
+       <width>256</width>
+       <height>329</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>41-60</string>
+    </attribute>
+    <widget class="QTableView" name="table05">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>13</y>
+       <width>256</width>
+       <height>329</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+    <widget class="QTableView" name="table06">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>13</y>
+       <width>256</width>
+       <height>329</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>61-80</string>
+    </attribute>
+    <widget class="QTableView" name="table08">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>13</y>
+       <width>256</width>
+       <height>329</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+    <widget class="QTableView" name="table07">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>13</y>
+       <width>256</width>
+       <height>329</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>81-100</string>
+    </attribute>
+    <widget class="QTableView" name="table10">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>17</y>
+       <width>256</width>
+       <height>324</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+    </widget>
+    <widget class="QTableView" name="table09">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>13</y>
+       <width>256</width>
+       <height>329</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="btnNext">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>480</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	background-color:#0f2033;
+	color:rgba(255,255,255,200);
+	border-radius:5px;
+}
+QPushButton:pressed
+{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(255,50,50,255);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	background-color:rgba(255,50,50,255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sublbl">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:black;</string>
+   </property>
+   <property name="text">
+    <string>Subject Attendance</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnPrev">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>480</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+	background-color:#0f2033;
+	color:rgba(255,255,255,200);
+	border-radius:5px;
+}
+QPushButton:pressed
+{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(255,50,50,255);
+	background-position:calc(100% -10px)center;
+}
+QPushButton:hover
+{
+	background-color:rgba(255,50,50,255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Previous</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="status">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>490</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:black;</string>
+   </property>
+   <property name="text">
+    <string>Status : </string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
